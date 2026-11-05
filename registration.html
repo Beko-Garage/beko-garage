@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Beko Garage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-page="registration">
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Booking Request</span>
+      <h1>Let's plan your <span class="accent">next look.</span></h1>
+      <p>Isi formulir berikut untuk mengirim detail permintaan booking melalui WhatsApp Beko Garage.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container form-layout">
+      <aside class="panel reveal">
+        <h2>Sebelum booking</h2>
+        <p>Siapkan informasi jenis kendaraan, layanan yang diinginkan, serta referensi warna atau konsep jika ada.</p>
+        <p>Formulir ini akan membuka WhatsApp dengan pesan yang sudah disusun. Booking belum tercatat sampai pesan dikirim dan dikonfirmasi oleh Beko Garage.</p>
+      </aside>
+
+      <form class="panel reveal" id="booking-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="name">Nama</label><input id="name" name="name" required placeholder="Nama kamu"></div>
+          <div class="field"><label for="phone">Nomor WhatsApp</label><input id="phone" name="phone" type="tel" required placeholder="08xxxxxxxxxx"></div>
+          <div class="field">
+            <label for="vehicle">Jenis kendaraan</label>
+            <select id="vehicle" name="vehicle" required>
+              <option value="">Pilih kendaraan</option>
+              <option value="Motor">Motor</option>
+              <option value="Sepeda kalcer">Sepeda kalcer</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="service">Layanan</label>
+            <select id="service" name="service" required>
+              <option value="">Pilih layanan</option>
+              <option value="Full Body Painting Motor">Full Body Painting Motor</option>
+              <option value="Full Body Painting Sepeda Kalcer">Full Body Painting Sepeda Kalcer</option>
+              <option value="Repaint Velg">Repaint Velg</option>
+              <option value="Custom Warna">Custom Warna</option>
+              <option value="Restorasi Cat">Restorasi Cat</option>
+            </select>
+          </div>
+          <div class="field full"><label for="color">Warna atau konsep yang diinginkan</label><input id="color" name="color" placeholder="Contoh: hitam doff, merah marun, atau sesuai referensi"></div>
+          <div class="field full"><label for="details">Catatan tambahan</label><textarea id="details" name="details" placeholder="Ceritakan kondisi kendaraan atau detail kebutuhanmu"></textarea></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Kirim melalui WhatsApp</button>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <p class="form-help">Dengan menekan tombol, WhatsApp akan terbuka. Periksa kembali pesan sebelum mengirim.</p>
+      </form>
+    </div>
+  </section>
+</main>
+</body>
+</html>
